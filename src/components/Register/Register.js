@@ -23,7 +23,7 @@ class Register extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    fetch('http://localhost:3000/signin', {
+    fetch('http://localhost:3000/register', {
       method: 'post',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify({
@@ -76,9 +76,12 @@ class Register extends React.Component {
                      />
             </div>
           </fieldset>
-          <div className="lh-copy mt3">
-            <p onClick={this.onSubmitSignIn} 
-            className="f6 link dim black db pointer">Register</p>
+          <div className="">
+            <input onClick={this.onSubmitSignIn} 
+            className="b ph3 pv2 input-reset be b--black bg-transparent"
+            type="submit"
+            value="Register"
+            />
           </div>
         </div>
       </main>
